@@ -60,7 +60,7 @@
 			
 			foreach($_POST["del"] as $dd)
 			{
-				mysqli_query($link, "update post set display = 1 where id = '".$dd."'");
+				mysqli_query($link, "delete from post where id = '".$dd."'");
 			}
 			
 			header("location:admin.php?redo=rr");
@@ -102,7 +102,7 @@
 			
 			foreach($_POST["del"] as $dd)
 			{
-				mysqli_query($link, "update movie set display = 1 where id = '".$dd."'");
+				mysqli_query($link, "delete from movie where id = '".$dd."'");
 			}
 			
 			header("location:admin.php?redo=vv");
@@ -173,22 +173,25 @@
 		}
 		elseif($_GET["do"] == "gt")
 		{
-			$result = mysqli_query($link, "select seat from orders where movie = '".$_POST["m"]."' and date = '".$_POST["d"]."'");
+			$result = mysqli_query($link, "select seat, time from orders where movie = '".$_POST["m"]."' and date = '".$_POST["d"]."'");
 			$seat = array();
 			while($row = mysqli_fetch_array($result))
 			{
 				$s = unserialize($row["seat"]);
-				$seat = array_merge($seat, $s);
+				$seat[$row["time"]] = array_merge($seat, $s);
 			}
-			$left = 20-count($seat);
+			
 			for($i=0;$i<5;$i++)
 			{
+				$left = 20;
+				if(!empty($seat[$i]))	$left = 20 - count($seat[$i]);
 				echo "<option value='".$i."'>".$time[$i]." 剩餘座位：".$left."</option>";
 			}
 		}
 		elseif($_GET["do"] == "delord")
 		{
-			mysqli_query($link, "delete from order where id = '".$_GET["id"]."'");
+			print_r($_GET);
+			mysqli_query($link, "delete from orders where id = '".$_GET["id"]."'");
 		}
 		elseif($_GET["do"] == "fastdel")
 		{
