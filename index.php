@@ -30,23 +30,46 @@
       <div class="rb tab" style="width:95%;">
         <div id="abgne-block-20111227">
           <ul class="lists">
-			<li><img src="<?=$fp?>" id="p" height="200px"></li>
+			<img src="" height="100px" id="showpost" class="show">
+				<span id="showtext"  class="show"></span>
+			<div style="width:400px; height:100px;" class="dbor">
+				<?php 
+				 $result = mysqli_query($link, "select * from post where display = 1 order by seq");
+				 $tpo = mysqli_num_rows($result);
+				 if($tpo > 4) echo "<img src='l.jpg' onclick='pp(1)'>";
+				 
+				 $i = 0;
+				 while($row = mysqli_fetch_array($result))
+				 {
+					 ?>
+					 <img src='post/<?=$row["file"]?>' class='im' id='post<?=$i?>' width='80' height='103' style="display:inline" onclick="ani(<?=$i?>)" ani="<?=$row["ani"]?>">
+					 <span style="display:none" id='text<?=$i?>'><?=$row["text"]?></span>
+					 <?php
+					 $i++;
+				 }
+				 
+				 if($tpo > 4) echo "<img src='r.jpg' onclick='pp(2)'>";
+				 ?>
+					<script>
+					var nowpage=0,num=<?=$tpo?>;
+					function pp(x)
+					{
+						var s,t;
+						if(x==1&&nowpage-1>=0)
+						{nowpage--;}
+						if(x==2&&(nowpage+1)<=num-4)
+						{nowpage++;}
+						$(".im").hide()
+						for(s=0;s<=3;s++)
+						{
+							t=s*1+nowpage*1;
+							$("#post"+t).show()
+						}
+					}
+					pp(1)
+				</script>
+			</div>
           </ul>
-		  <div class="la"></div>
-          <ul class="controls">
-			<?php
-				$result = mysqli_query($link, "select * from post where display = 1 order by seq");
-				$i=0;
-				while($row = mysqli_fetch_array($result))
-				{
-					?>
-					<li><img src="post/<?=$row["file"]?>" height="50px" id="pp<?=$i?>" onclick="show(<?=$i?>, <?=$row["ani"]?>)"></li>
-					<?php
-					$i++;
-				}
-			?>
-          </ul>
-		  <div class="ra" style="position:absolute;top:-60px;right:10px;"></div>
         </div>
       </div>
     </div>
@@ -58,7 +81,7 @@
 			<?php
 				$p=1;
 				if(!empty($_GET["p"]))	$p=$_GET["p"];
-				$total = mysqli_num_rows(mysqli_query($link, "select * from movie where display = 1"));
+				$total = mysqli_num_rows(mysqli_query($link, "select * from movie where display = 1 order by seq"));
 				$tp = ceil($total/4);
 				
 				$s=$p*4-4;
@@ -106,45 +129,40 @@
   <div id="bo"> ©Copyright 2010~2014 ABC影城 版權所有 </div>
 </div>
 <script>
-	var tpo = <?=$i?>;
+	var tpo = <?=$tpo?>;
 	var po = 0;
 	
 	setInterval(auto, 2000);
 	function auto()
 	{
-		$("#p").attr("src", $("#pp"+po).attr("src"));
-		po++;
-		if(po>tpo)	po=0;
+		var p = po++;
+		if(po > tpo) po=0;
+		ani(po);
 	}
 	
-	function show(pos, ani)
+	function ani(post)
 	{
-		var a = $("#p").attr("src", $("#pp"+po).attr("src"));
-		anim(p, ani);
-		po = pos;
+		var ani = $("#post"+po).attr("ani");
+		
+		if(ani == 1)		$(".show").fadeOut(function(){change(post);});
+		else if(ani == 2)	$(".show").slideToggle(function(){change(post);});
+		else if(ani == 3)	$(".show").slideUp(function(){change(post);});
+		
+		ani = $("#post"+po).attr("ani");
+		
+		po = post;
+		
+		ani = $("#post"+po).attr("ani");
+		
+		if(ani == 1)		$(".show").fadeIn();
+		else if(ani == 2)	$(".show").slideToggle();
+		else if(ani == 3)	$(".show").slideDown();
 	}
-	function anim(p, type)
+	function change(post)
 	{
-		if(type == 1)
-		{
-			$(p).fadeOut();
-			$(p).hide();
-			$(p).fadeIn();
-		}
-		else if(type == 2)
-		{
-			$(p).animate();
-			
-			$(p).fadeIn();
-		}
-		else if(type == 3)
-		{
-			$(p).slideUp();
-			$(p).hide();
-			$(p).slideDown();
-		}
+		$("#showpost").attr("src", $("#post"+post).attr("src") );
+		$("#showtext").text( $("#text"+post).text() );
 	}
-	
 </script>
 </body>
 </html>
