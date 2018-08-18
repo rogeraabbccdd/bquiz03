@@ -29,10 +29,12 @@
       <h1>預告片介紹</h1>
       <div class="rb tab" style="width:95%;">
         <div id="abgne-block-20111227">
-          <ul class="lists">
-			<img src="" height="100px" id="showpost" class="show">
+			<div style="height:300px" class="text-center">
+			<img src="" height="250px" id="showpost" class="show">
+			<br>
 				<span id="showtext"  class="show"></span>
-			<div style="width:400px; height:100px;" class="dbor">
+			</div>
+			<div style="width:400px; height:100px;" class="dbor text-center">
 				<?php 
 				 $result = mysqli_query($link, "select * from post where display = 1 order by seq");
 				 $tpo = mysqli_num_rows($result);
@@ -69,7 +71,6 @@
 					pp(1)
 				</script>
 			</div>
-          </ul>
         </div>
       </div>
     </div>
