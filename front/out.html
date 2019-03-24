@@ -1,0 +1,520 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>訂票 - 訂單 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="編輯電影票訂單頁 out.php">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../back/admin.html" />
+    
+    
+    <link rel="prev" href="seat.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    ABC影城
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">軟體安裝測試</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before/file.html">
+            
+                <a href="../before/file.html">
+            
+                    
+                    整理檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before/sql.html">
+            
+                <a href="../before/sql.html">
+            
+                    
+                    建立資料庫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../before/func.html">
+            
+                <a href="../before/func.html">
+            
+                    
+                    編寫共用程式碼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前台</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="data.html">
+            
+                <a href="data.html">
+            
+                    
+                    編輯共用資料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="index-post.html">
+            
+                <a href="index-post.html">
+            
+                    
+                    首頁 - 預告片海報
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="index-post.html">
+            
+                <a href="index-post.html">
+            
+                    
+                    首頁 - 預告片海報
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="index-movie.html">
+            
+                <a href="index-movie.html">
+            
+                    
+                    首頁 - 院線片清單
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="movie.html">
+            
+                <a href="movie.html">
+            
+                    
+                    劇情簡介頁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="book.html">
+            
+                <a href="book.html">
+            
+                    
+                    訂票 - 訂票頁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="seat.html">
+            
+                <a href="seat.html">
+            
+                    
+                    訂票 - 座位選擇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.8" data-path="out.html">
+            
+                <a href="out.html">
+            
+                    
+                    訂票 - 訂單
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">後台</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../back/admin.html">
+            
+                <a href="../back/admin.html">
+            
+                    
+                    後台管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../back/post.html">
+            
+                <a href="../back/post.html">
+            
+                    
+                    預告片海報管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../back/movie.html">
+            
+                <a href="../back/movie.html">
+            
+                    
+                    院線片管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../back/order.html">
+            
+                <a href="../back/order.html">
+            
+                    
+                    電影訂票管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">結語</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../end/end.html">
+            
+                <a href="../end/end.html">
+            
+                    
+                    結語
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >訂票 - 訂單</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x96FB;&#x5F71;&#x7968;&#x8A02;&#x55AE;&#x9801;">&#x96FB;&#x5F71;&#x7968;&#x8A02;&#x55AE;&#x9801;</h1>
+<p>&#x7DE8;&#x8F2F;&#x96FB;&#x5F71;&#x7968;&#x8A02;&#x55AE;&#x9801; <code>out.php</code></p>
+<h2 id="&#x8655;&#x7406;&#x8A02;&#x55AE;&#x8CC7;&#x6599;">&#x8655;&#x7406;&#x8A02;&#x55AE;&#x8CC7;&#x6599;</h2>
+<p>&#x5728;&#x9801;&#x9996;&#x8F38;&#x5165;&#x8655;&#x7406;&#x8A02;&#x55AE;&#x8CC7;&#x6599;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;</p>
+<pre class="language-"><code class="lang-php"><span class="token comment">// &#x5C07;&#x5EA7;&#x4F4D;&#x9663;&#x5217;&#x5E8F;&#x5217;&#x5316;&#x4EE5;&#x5B58;&#x5165;&#x8CC7;&#x6599;&#x5EAB;</span>
+<span class="token variable">$seat</span> <span class="token operator">=</span> <span class="token function">serialize</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;seat&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x8A02;&#x55AE;&#x7DE8;&#x865F;&#x70BA;&#x8A02;&#x8CFC;&#x65E5;&#x671F;8&#x78BC;+&#x8CC7;&#x6599;ID&#x88DC;0&#x81F3;4&#x4F4D;&#x6578;</span>
+<span class="token variable">$num</span> <span class="token operator">=</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;Ymd&quot;</span><span class="token punctuation">,</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;d&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">str_pad</span><span class="token punctuation">(</span><span class="token variable">$pdo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">lastInsertId</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;0&quot;</span><span class="token punctuation">,</span> <span class="token constant">STR_PAD_LEFT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// &#x5BEB;&#x5165;&#x8CC7;&#x6599;&#x5EAB;</span>
+<span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;insert into orders values(null, &quot;</span><span class="token punctuation">.</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;m&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;, &quot;</span><span class="token punctuation">.</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;d&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;, &quot;</span><span class="token punctuation">.</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;t&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;, &apos;&quot;</span><span class="token punctuation">.</span><span class="token variable">$seat</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;&apos;, &apos;&quot;</span><span class="token punctuation">.</span><span class="token variable">$num</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;&apos;)&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x986F;&#x793A;&#x8A02;&#x55AE;&#x5167;&#x5BB9;">&#x986F;&#x793A;&#x8A02;&#x55AE;&#x5167;&#x5BB9;</h2>
+<p>&#x5728;&#x5167;&#x5BB9;&#x5340;&#x986F;&#x793A;&#x8A02;&#x55AE;&#x5167;&#x5BB9;</p>
+<pre class="language-"><code class="lang-php"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token double-quoted-string string">&quot;tab rb&quot;</span> style<span class="token operator">=</span><span class="token double-quoted-string string">&quot;width:87%;&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token double-quoted-string string">&quot;background:#FFF; width:100%; color:#333; text-align:left&quot;</span><span class="token operator">&gt;</span>
+    &#x611F;&#x8B1D;&#x60A8;&#x7684;&#x8A02;&#x8CFC;&#xFF0C;&#x60A8;&#x7684;&#x8A02;&#x55AE;&#x7DE8;&#x865F;&#x662F;<span class="token delimiter important">&lt;?=</span><span class="token variable">$num</span><span class="token delimiter important">?&gt;</span>
+    <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    &#x65E5;&#x671F;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;Y-m-d&quot;</span><span class="token punctuation">,</span> <span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;d&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token delimiter important">?&gt;</span>
+    <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    &#x6642;&#x9593;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$time</span><span class="token punctuation">[</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;t&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span>
+    <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+    &#x5EA7;&#x4F4D;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?php</span> <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;seat&quot;</span><span class="token punctuation">]</span> <span class="token keyword">as</span> <span class="token variable">$s</span><span class="token punctuation">)</span> <span class="token keyword">echo</span> <span class="token variable">$s</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;,&quot;</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="seat.html" class="navigation navigation-prev " aria-label="Previous page: 訂票 - 座位選擇">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../back/admin.html" class="navigation navigation-next " aria-label="Next page: 後台管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"編輯電影票訂單頁 out.php","title":"訂票 - 訂單","level":"3.8","depth":1,"next":{"title":"後台管理","level":"4.1","depth":1,"path":"back/admin.md","ref":"back/admin.md","articles":[]},"previous":{"title":"訂票 - 座位選擇","level":"3.7","depth":1,"path":"front/seat.md","ref":"front/seat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-131804412-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"front/out.md","mtime":"2019-03-24T18:12:20.449Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T21:03:10.592Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

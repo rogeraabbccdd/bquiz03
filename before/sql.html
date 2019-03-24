@@ -1,0 +1,542 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>建立資料庫 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="安裝好XAMPP後，進行SQL資料庫"測試"，將每題的資料表都先建立好，並新增內容">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="func.html" />
+    
+    
+    <link rel="prev" href="file.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    ABC影城
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">軟體安裝測試</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="file.html">
+            
+                <a href="file.html">
+            
+                    
+                    整理檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="sql.html">
+            
+                <a href="sql.html">
+            
+                    
+                    建立資料庫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="func.html">
+            
+                <a href="func.html">
+            
+                    
+                    編寫共用程式碼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前台</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../front/data.html">
+            
+                <a href="../front/data.html">
+            
+                    
+                    編輯共用資料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../front/index-post.html">
+            
+                <a href="../front/index-post.html">
+            
+                    
+                    首頁 - 預告片海報
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../front/index-post.html">
+            
+                <a href="../front/index-post.html">
+            
+                    
+                    首頁 - 預告片海報
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../front/index-movie.html">
+            
+                <a href="../front/index-movie.html">
+            
+                    
+                    首頁 - 院線片清單
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../front/movie.html">
+            
+                <a href="../front/movie.html">
+            
+                    
+                    劇情簡介頁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../front/book.html">
+            
+                <a href="../front/book.html">
+            
+                    
+                    訂票 - 訂票頁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../front/seat.html">
+            
+                <a href="../front/seat.html">
+            
+                    
+                    訂票 - 座位選擇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../front/out.html">
+            
+                <a href="../front/out.html">
+            
+                    
+                    訂票 - 訂單
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">後台</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../back/admin.html">
+            
+                <a href="../back/admin.html">
+            
+                    
+                    後台管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../back/post.html">
+            
+                <a href="../back/post.html">
+            
+                    
+                    預告片海報管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../back/movie.html">
+            
+                <a href="../back/movie.html">
+            
+                    
+                    院線片管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../back/order.html">
+            
+                <a href="../back/order.html">
+            
+                    
+                    電影訂票管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">結語</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../end/end.html">
+            
+                <a href="../end/end.html">
+            
+                    
+                    結語
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >建立資料庫</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5EFA;&#x7ACB;&#x8CC7;&#x6599;&#x5EAB;">&#x5EFA;&#x7ACB;&#x8CC7;&#x6599;&#x5EAB;</h1>
+<p>&#x9019;&#x984C;&#x8CC7;&#x6599;&#x5EAB;&#x6C92;&#x6709;&#x9700;&#x8981;&#x7279;&#x5225;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x53EA;&#x6709;&#x96FB;&#x5F71;&#x7684;&#x8CC7;&#x6599;&#x6B04;&#x4F4D;&#x6709;&#x9EDE;&#x591A;&#x800C;&#x5DF2;<br>&#x9019;&#x984C;&#x4E0D;&#x7528;&#x505A;&#x767B;&#x5165;&#x4EBA;&#x6578;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x5EFA;&#x7ACB;&#x7BA1;&#x7406;&#x54E1;&#x548C;&#x6703;&#x54E1;&#x8CC7;&#x6599;&#x5EAB;&#xFF0C;&#x56E0;&#x70BA;&#x984C;&#x76EE;&#x53EA;&#x6709;&#x4E00;&#x4F4D;&#x7BA1;&#x7406;&#x54E1;&#x767B;&#x5165;&#xFF0C;&#x5224;&#x65B7;&#x5BEB;&#x6B7B;&#x5C31;&#x597D;  </p>
+<h2 id="&#x9662;&#x7DDA;&#x7247;">&#x9662;&#x7DDA;&#x7247;</h2>
+<p>&#x65B0;&#x589E;<code>movie</code>&#x8CC7;&#x6599;&#x8868;&#xFF0C;&#x5132;&#x5B58;&#x9662;&#x7DDA;&#x7247;&#x8CC7;&#x6599;  </p>
+<ul>
+<li><code>id</code>&#x70BA;AUTO_INCREMENT&#x7684;&#x6D41;&#x6C34;&#x865F;</li>
+<li><code>name</code>&#x70BA;&#x7247;&#x540D;</li>
+<li><code>level</code>&#x70BA;&#x5206;&#x7D1A;</li>
+<li><code>length</code>&#x70BA;&#x7247;&#x9577;</li>
+<li><code>ondate</code>&#x70BA;&#x4E0A;&#x6620;&#x65E5;&#x671F;</li>
+<li><code>publish</code>&#x70BA;&#x767C;&#x884C;&#x5546;</li>
+<li><code>director</code>&#x70BA;&#x5C0E;&#x6F14;</li>
+<li><code>trailer</code>&#x70BA;&#x9810;&#x544A;&#x7247;</li>
+<li><code>poster</code>&#x70BA;&#x6D77;&#x5831;</li>
+<li><code>text</code>&#x70BA;&#x7C21;&#x4ECB;</li>
+<li><code>display</code>&#x70BA;&#x662F;&#x5426;&#x5728;&#x524D;&#x53F0;&#x986F;&#x793A;</li>
+<li><code>seq</code>&#x70BA;&#x986F;&#x793A;&#x9806;&#x5E8F;</li>
+</ul>
+<p><img src="../images/sqlmovie.png" alt="&#x8CC7;&#x6599;&#x8868;&#x7D50;&#x69CB;">
+<img src="../images/sqlmovie2.png" alt="&#x8CC7;&#x6599;&#x8868;&#x5167;&#x5BB9;"></p>
+<h2 id="&#x9810;&#x544A;&#x7247;">&#x9810;&#x544A;&#x7247;</h2>
+<p>&#x65B0;&#x589E;<code>post</code>&#x8CC7;&#x6599;&#x8868;&#xFF0C;&#x5132;&#x5B58;&#x9810;&#x544A;&#x7247;&#x6D77;&#x5831;  </p>
+<ul>
+<li><code>id</code>&#x70BA;AUTO_INCREMENT&#x7684;&#x6D41;&#x6C34;&#x865F;</li>
+<li><code>file</code>&#x70BA;&#x6A94;&#x540D;</li>
+<li><code>text</code>&#x70BA;&#x7C21;&#x4ECB;</li>
+<li><code>display</code>&#x70BA;&#x662F;&#x5426;&#x5728;&#x524D;&#x53F0;&#x986F;&#x793A;</li>
+<li><code>seq</code>&#x70BA;&#x986F;&#x793A;&#x9806;&#x5E8F;</li>
+</ul>
+<p><img src="../images/sqlpost.png" alt="&#x8CC7;&#x6599;&#x8868;&#x7D50;&#x69CB;"></p>
+<p><img src="../images/sqlpost2.png" alt="&#x8CC7;&#x6599;&#x8868;&#x5167;&#x5BB9;"></p>
+<h2 id="&#x9810;&#x544A;&#x7247;&#x52D5;&#x756B;">&#x9810;&#x544A;&#x7247;&#x52D5;&#x756B;</h2>
+<p>&#x65B0;&#x589E;<code>ani</code>&#x8CC7;&#x6599;&#x8868;&#xFF0C;&#x5132;&#x5B58;&#x9810;&#x544A;&#x7247;&#x52D5;&#x756B;&#x65B9;&#x5F0F;<br>&#x9019;&#x908A;&#x7B97;&#x662F;&#x984C;&#x76EE;&#x7684;&#x5C0F;&#x6F0F;&#x6D1E;&#xFF0C;&#x984C;&#x76EE;&#x4E26;&#x6C92;&#x6709;&#x898F;&#x5B9A;&#x5404;&#x9810;&#x544A;&#x7247;&#x4E00;&#x500B;&#x52D5;&#x756B;&#x6548;&#x679C;&#x9084;&#x662F;&#x5168;&#x90E8;&#x540C;&#x4E00;&#x7A2E;&#x6548;&#x679C;<br>&#x6240;&#x4EE5;&#x7528;&#x9019;&#x7A2E;&#x65B9;&#x5F0F;&#x4F86;&#x6E1B;&#x5C11;&#x9996;&#x9801;&#x52D5;&#x756B;&#x8F2A;&#x64AD;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;&#x91CF;</p>
+<p><img src="../images/sqlani.png" alt="&#x8CC7;&#x6599;&#x8868;&#x7D50;&#x69CB;"></p>
+<p><img src="../images/sqlani2.png" alt="&#x8CC7;&#x6599;&#x8868;&#x5167;&#x5BB9;"></p>
+<h2 id="&#x8A02;&#x7968;">&#x8A02;&#x7968;</h2>
+<p>&#x65B0;&#x589E;<code>orders</code>&#x8CC7;&#x6599;&#x8868;&#xFF0C;&#x5132;&#x5B58;&#x8A02;&#x7968;&#x8CC7;&#x6599;  </p>
+<ul>
+<li><code>id</code>&#x70BA;AUTO_INCREMENT&#x7684;&#x6D41;&#x6C34;&#x865F;</li>
+<li><code>movie</code>&#x70BA;&#x96FB;&#x5F71;ID</li>
+<li><code>date</code>&#x70BA;&#x65E5;&#x671F;</li>
+<li><code>time</code>&#x70BA;&#x6642;&#x6BB5;</li>
+<li><code>seat</code>&#x70BA;&#x5EA7;&#x4F4D;</li>
+<li><code>num</code>&#x70BA;&#x8A02;&#x55AE;&#x7DE8;&#x865F;</li>
+</ul>
+<p><img src="../images/sqlorder.png" alt="&#x8CC7;&#x6599;&#x8868;&#x7D50;&#x69CB;"></p>
+<p><img src="../images/sqlorder2.png" alt="&#x8CC7;&#x6599;&#x8868;&#x5167;&#x5BB9;"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="file.html" class="navigation navigation-prev " aria-label="Previous page: 整理檔案">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="func.html" class="navigation navigation-next " aria-label="Next page: 編寫共用程式碼">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"安裝好XAMPP後，進行SQL資料庫\"測試\"，將每題的資料表都先建立好，並新增內容","title":"建立資料庫","level":"2.2","depth":1,"next":{"title":"編寫共用程式碼","level":"2.3","depth":1,"path":"before/func.md","ref":"before/func.md","articles":[]},"previous":{"title":"整理檔案","level":"2.1","depth":1,"path":"before/file.md","ref":"before/file.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-131804412-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"before/sql.md","mtime":"2019-03-24T16:52:26.317Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T21:03:10.592Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

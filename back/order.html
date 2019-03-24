@@ -1,0 +1,562 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>電影訂票管理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="編輯電影訂票管理 order.php">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../end/end.html" />
+    
+    
+    <link rel="prev" href="movie.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    ABC影城
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">軟體安裝測試</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../before/file.html">
+            
+                <a href="../before/file.html">
+            
+                    
+                    整理檔案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../before/sql.html">
+            
+                <a href="../before/sql.html">
+            
+                    
+                    建立資料庫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../before/func.html">
+            
+                <a href="../before/func.html">
+            
+                    
+                    編寫共用程式碼
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">前台</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../front/data.html">
+            
+                <a href="../front/data.html">
+            
+                    
+                    編輯共用資料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../front/index-post.html">
+            
+                <a href="../front/index-post.html">
+            
+                    
+                    首頁 - 預告片海報
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../front/index-post.html">
+            
+                <a href="../front/index-post.html">
+            
+                    
+                    首頁 - 預告片海報
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../front/index-movie.html">
+            
+                <a href="../front/index-movie.html">
+            
+                    
+                    首頁 - 院線片清單
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../front/movie.html">
+            
+                <a href="../front/movie.html">
+            
+                    
+                    劇情簡介頁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../front/book.html">
+            
+                <a href="../front/book.html">
+            
+                    
+                    訂票 - 訂票頁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../front/seat.html">
+            
+                <a href="../front/seat.html">
+            
+                    
+                    訂票 - 座位選擇
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../front/out.html">
+            
+                <a href="../front/out.html">
+            
+                    
+                    訂票 - 訂單
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">後台</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="admin.html">
+            
+                <a href="admin.html">
+            
+                    
+                    後台管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="post.html">
+            
+                <a href="post.html">
+            
+                    
+                    預告片海報管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="movie.html">
+            
+                <a href="movie.html">
+            
+                    
+                    院線片管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="order.html">
+            
+                <a href="order.html">
+            
+                    
+                    電影訂票管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">結語</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../end/end.html">
+            
+                <a href="../end/end.html">
+            
+                    
+                    結語
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >電影訂票管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x96FB;&#x5F71;&#x8A02;&#x7968;&#x7BA1;&#x7406;">&#x96FB;&#x5F71;&#x8A02;&#x7968;&#x7BA1;&#x7406;</h1>
+<p>&#x7DE8;&#x8F2F;&#x96FB;&#x5F71;&#x8A02;&#x7968;&#x7BA1;&#x7406; <code>order.php</code></p>
+<h2 id="&#x88FD;&#x4F5C;&#x8868;&#x55AE;">&#x88FD;&#x4F5C;&#x8868;&#x55AE;</h2>
+<p>&#x88FD;&#x4F5C;&#x96FB;&#x5F71;&#x8A02;&#x7968;&#x7BA1;&#x7406;&#x8868;&#x55AE;</p>
+<pre class="language-"><code class="lang-php"><span class="token operator">&lt;</span>form action<span class="token operator">=</span><span class="token double-quoted-string string">&quot;api.php?do=fastdel&quot;</span> method<span class="token operator">=</span><span class="token double-quoted-string string">&quot;post&quot;</span><span class="token operator">&gt;</span>
+&#x5FEB;&#x901F;&#x522A;&#x9664; 
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> &#x984C;&#x76EE;&#x53EA;&#x6709;&#x8AAA;&#x80FD;&#x522A;&#x9664;&#x6307;&#x5B9A;&#x65E5;&#x671F;&#xFF0C;&#x6C92;&#x8AAA;&#x8981;&#x505A;&#x9078;&#x55AE;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x8F38;&#x5165;&#x6587;&#x5B57; <span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;radio&quot;</span> name<span class="token operator">=</span><span class="token double-quoted-string string">&quot;mode&quot;</span> value<span class="token operator">=</span><span class="token double-quoted-string string">&quot;1&quot;</span><span class="token operator">&gt;</span>&#x4F9D;&#x65E5;&#x671F;
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;text&quot;</span> name<span class="token operator">=</span><span class="token double-quoted-string string">&quot;date&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;radio&quot;</span> name<span class="token operator">=</span><span class="token double-quoted-string string">&quot;mode&quot;</span> value<span class="token operator">=</span><span class="token double-quoted-string string">&quot;2&quot;</span><span class="token operator">&gt;</span>&#x4F9D;&#x96FB;&#x5F71;
+    <span class="token operator">&lt;</span>select name<span class="token operator">=</span><span class="token double-quoted-string string">&quot;movie&quot;</span><span class="token operator">&gt;</span>
+        <span class="token delimiter important">&lt;?php</span>
+            <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;select * from movie&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$result</span> <span class="token keyword">as</span> <span class="token variable">$row</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">echo</span> <span class="token single-quoted-string string">&apos;&lt;option value=&quot;&apos;</span><span class="token punctuation">.</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;id&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token single-quoted-string string">&apos;&quot;&gt;&apos;</span><span class="token punctuation">.</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;name&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token single-quoted-string string">&apos;&lt;/option&gt;&apos;</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token delimiter important">?&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>select<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;submit&quot;</span> value<span class="token operator">=</span><span class="token double-quoted-string string">&quot;&#x522A;&#x9664;&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>hr<span class="token operator">&gt;</span>
+<span class="token delimiter important">&lt;?php</span>
+    <span class="token comment">// &#x4E0D;&#x4F7F;&#x7528;&#x8868;&#x683C;&#xFF0C;&#x7701;&#x53BB;&#x6253;tr td&#x7B49;&#x7B49;&#x6A19;&#x7C64;&#x7684;&#x6642;&#x9593;</span>
+    <span class="token comment">// &#x76F4;&#x63A5;&#x7528;hr&#x548C;br&#x5206;&#x9694;&#x6BD4;&#x8F03;&#x5FEB;</span>
+    <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;select orders.*, movie.name as mn from orders, movie where movie.id = orders.movie order by date, id desc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$result</span> <span class="token keyword">as</span> <span class="token variable">$row</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$seat</span> <span class="token operator">=</span> <span class="token function">unserialize</span><span class="token punctuation">(</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;seat&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token delimiter important">?&gt;</span>
+            &#x8A02;&#x55AE;&#x7DE8;&#x865F;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;num&quot;</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x96FB;&#x5F71;&#x540D;&#x7A31;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;mn&quot;</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x65E5;&#x671F;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;Y-m-d&quot;</span><span class="token punctuation">,</span> <span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;date&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x6642;&#x9593;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$time</span><span class="token punctuation">[</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;time&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x6578;&#x91CF;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$seat</span><span class="token punctuation">)</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x4F4D;&#x7F6E;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?php</span> <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$seat</span> <span class="token keyword">as</span> <span class="token variable">$s</span><span class="token punctuation">)</span>    <span class="token keyword">echo</span> <span class="token variable">$s</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;,&quot;</span><span class="token punctuation">;</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> &#x522A;&#x9664;&#x76F4;&#x63A5;&#x505A;&#x6309;&#x9215;&#x9023;&#x5230;api<span class="token punctuation">.</span>php&#x518D;&#x56DE;&#x4F86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x82B1;&#x6642;&#x9593;&#x505A;ajax&#x6548;&#x679C; <span class="token operator">--</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token double-quoted-string string">&quot;&#x522A;&#x9664;&quot;</span> onclick<span class="token operator">=</span><span class="token double-quoted-string string">&quot;window.location=&apos;api.php?do=delord&amp;id=&lt;?=<span class="token interpolation"><span class="token variable">$row</span></span>[&quot;</span>id<span class="token double-quoted-string string">&quot;]?&gt;&apos;&quot;</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>hr<span class="token operator">&gt;</span>
+        <span class="token delimiter important">&lt;?php</span>
+    <span class="token punctuation">}</span>
+<span class="token delimiter important">?&gt;</span>
+</code></pre>
+<h2 id="&#x8655;&#x7406;&#x8868;&#x55AE;">&#x8655;&#x7406;&#x8868;&#x55AE;</h2>
+<p>&#x5728; <code>api.php</code> &#x52A0;&#x5165;&#x8655;&#x7406;&#x8868;&#x55AE;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;</p>
+<pre class="language-"><code class="lang-php"><span class="token comment">// &#x55AE;&#x7B46;&#x522A;&#x9664;</span>
+<span class="token keyword">case</span> <span class="token double-quoted-string string">&quot;delord&quot;</span><span class="token punctuation">:</span>
+    <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;delete from orders where id = &apos;&quot;</span><span class="token punctuation">.</span><span class="token variable">$_GET</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;id&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;&apos;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">lo</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;admin.php?redo=order&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+<span class="token comment">// &#x5FEB;&#x901F;&#x522A;&#x9664;</span>
+<span class="token keyword">case</span> <span class="token double-quoted-string string">&quot;fastdel&quot;</span><span class="token punctuation">:</span>
+    <span class="token operator">/</span><span class="token operator">/</span> &#x4F9D;&#x65E5;&#x671F;
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;mode&quot;</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token variable">$date</span> <span class="token operator">=</span> <span class="token function">strtotime</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;date&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;delete from orders where date = &apos;&quot;</span><span class="token punctuation">.</span><span class="token variable">$date</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;&apos;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// &#x4F9D;&#x96FB;&#x5F71;</span>
+    <span class="token keyword">elseif</span><span class="token punctuation">(</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;mode&quot;</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;delete from orders where movie = &apos;&quot;</span><span class="token punctuation">.</span><span class="token variable">$_POST</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;movie&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;&apos;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">lo</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;admin.php?redo=order&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">break</span><span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="movie.html" class="navigation navigation-prev " aria-label="Previous page: 院線片管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../end/end.html" class="navigation navigation-next " aria-label="Next page: 結語">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"編輯電影訂票管理 order.php","title":"電影訂票管理","level":"4.4","depth":1,"next":{"title":"結語","level":"5.1","depth":1,"path":"end/end.md","ref":"end/end.md","articles":[]},"previous":{"title":"院線片管理","level":"4.3","depth":1,"path":"back/movie.md","ref":"back/movie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-131804412-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"back/order.md","mtime":"2019-03-24T20:26:12.782Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-24T21:03:10.592Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
