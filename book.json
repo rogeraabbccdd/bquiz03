@@ -1,0 +1,30 @@
+{
+	"plugins": ["prism", "-highlight", "ga", "github", "github-buttons"],
+	"pluginsConfig": {
+		"prism": {
+			"css": [
+				"prismjs/themes/prism-okaidia.css"
+			]
+		},
+		"ga": {
+            "token": ""
+		},
+		"fontsettings": {
+			"theme": "night"
+		},
+		"github": {
+            "url": "https://github.com/rogeraabbccdd/bquiz03"
+		},
+		"github-buttons": {
+			"buttons": [
+				{
+				"user": "rogeraabbccdd",
+				"repo": "bquiz03",
+				"type": "star",
+				"size": "small",
+				"count": true
+				}
+			]
+		}
+	}
+}
