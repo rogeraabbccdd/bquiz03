@@ -12,14 +12,6 @@
 		return header("location:".$l);
 	}
 
-	function sql($tb, $dis)
-	{
-		$r = "select * from ".$tb;
-		if($dis) 	$r .= " where display = 1";
-		
-		return $r;
-	}
-
 	$level = array("", "普遍級", "保護級", "輔導級", "限制級");
 	$today = strtotime("today");
 	$now = strtotime("now");
