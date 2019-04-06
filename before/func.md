@@ -20,7 +20,6 @@ session_start();
 ## 寫入function
 
 由於考試有四個小時的時間限制，將一些常用語法寫成 function 來縮短字數，節省打字時間  
-第一題後台資料處理大同小異，因此也可以寫成function，避免複製貼上修時漏改  
 ```php
 // 節省 fetchAll 字數
 // 只寫fetchAll就夠了，因為fetchAll有含query，所以更新和刪除資料也能用
@@ -35,17 +34,6 @@ function All($sql)
 function lo($l)
 {
 	return header("location:".$l);
-}
-
-// 第一題的SQL很有規律，因此寫成function
-// 前台顯示加 where display = 1
-// 後台則不用(顯示所有資料)
-function sql($tb, $dis)
-{
-	$r = "select * from ".$tb;
-	if($dis) 	$r .= " where display = 1";
-	
-	return $r;
 }
 ```
 
