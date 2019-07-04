@@ -9,4 +9,3 @@ description: 國家技術士網頁設計乙級檢定第三題 - ABC影城 (17300
 解題說明: [https://rogeraabbccdd.github.io/bquiz03/](https://rogeraabbccdd.github.io/bquiz03/)  
 原始碼: [https://github.com/rogeraabbccdd/bquiz03](https://github.com/rogeraabbccdd/bquiz03)  
 ![ABC影城](./images/3.png)
-
