@@ -195,20 +195,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.3" data-path="../front/index-post.html">
-            
-                <a href="../front/index-post.html">
-            
-                    
-                    首頁 - 預告片海報
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="../front/index-movie.html">
+        <li class="chapter " data-level="3.3" data-path="../front/index-movie.html">
             
                 <a href="../front/index-movie.html">
             
@@ -221,7 +208,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="../front/movie.html">
+        <li class="chapter " data-level="3.4" data-path="../front/movie.html">
             
                 <a href="../front/movie.html">
             
@@ -234,7 +221,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="../front/book.html">
+        <li class="chapter " data-level="3.5" data-path="../front/book.html">
             
                 <a href="../front/book.html">
             
@@ -247,7 +234,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.7" data-path="../front/seat.html">
+        <li class="chapter " data-level="3.6" data-path="../front/seat.html">
             
                 <a href="../front/seat.html">
             
@@ -260,7 +247,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.8" data-path="../front/out.html">
+        <li class="chapter " data-level="3.7" data-path="../front/out.html">
             
                 <a href="../front/out.html">
             
@@ -408,37 +395,37 @@
     <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;text&quot;</span> name<span class="token operator">=</span><span class="token double-quoted-string string">&quot;date&quot;</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;radio&quot;</span> name<span class="token operator">=</span><span class="token double-quoted-string string">&quot;mode&quot;</span> value<span class="token operator">=</span><span class="token double-quoted-string string">&quot;2&quot;</span><span class="token operator">&gt;</span>&#x4F9D;&#x96FB;&#x5F71;
     <span class="token operator">&lt;</span>select name<span class="token operator">=</span><span class="token double-quoted-string string">&quot;movie&quot;</span><span class="token operator">&gt;</span>
-        <span class="token delimiter important">&lt;?php</span>
+        <span class="token operator">&lt;</span><span class="token operator">?</span>php
             <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;select * from movie&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$result</span> <span class="token keyword">as</span> <span class="token variable">$row</span><span class="token punctuation">)</span>
             <span class="token punctuation">{</span>
                 <span class="token keyword">echo</span> <span class="token single-quoted-string string">&apos;&lt;option value=&quot;&apos;</span><span class="token punctuation">.</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;id&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token single-quoted-string string">&apos;&quot;&gt;&apos;</span><span class="token punctuation">.</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;name&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token single-quoted-string string">&apos;&lt;/option&gt;&apos;</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
-        <span class="token delimiter important">?&gt;</span>
+        <span class="token operator">?</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>select<span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;submit&quot;</span> value<span class="token operator">=</span><span class="token double-quoted-string string">&quot;&#x522A;&#x9664;&quot;</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>hr<span class="token operator">&gt;</span>
-<span class="token delimiter important">&lt;?php</span>
+<span class="token operator">&lt;</span><span class="token operator">?</span>php
     <span class="token comment">// &#x4E0D;&#x4F7F;&#x7528;&#x8868;&#x683C;&#xFF0C;&#x7701;&#x53BB;&#x6253;tr td&#x7B49;&#x7B49;&#x6A19;&#x7C64;&#x7684;&#x6642;&#x9593;</span>
     <span class="token comment">// &#x76F4;&#x63A5;&#x7528;hr&#x548C;br&#x5206;&#x9694;&#x6BD4;&#x8F03;&#x5FEB;</span>
     <span class="token variable">$result</span> <span class="token operator">=</span> <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;select orders.*, movie.name as mn from orders, movie where movie.id = orders.movie order by date, id desc&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$result</span> <span class="token keyword">as</span> <span class="token variable">$row</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
         <span class="token variable">$seat</span> <span class="token operator">=</span> <span class="token function">unserialize</span><span class="token punctuation">(</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;seat&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token delimiter important">?&gt;</span>
-            &#x8A02;&#x55AE;&#x7DE8;&#x865F;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;num&quot;</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
-            &#x96FB;&#x5F71;&#x540D;&#x7A31;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;mn&quot;</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
-            &#x65E5;&#x671F;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;Y-m-d&quot;</span><span class="token punctuation">,</span> <span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;date&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
-            &#x6642;&#x9593;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$time</span><span class="token punctuation">[</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;time&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
-            &#x6578;&#x91CF;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?=</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$seat</span><span class="token punctuation">)</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
-            &#x4F4D;&#x7F6E;<span class="token punctuation">:</span><span class="token delimiter important">&lt;?php</span> <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$seat</span> <span class="token keyword">as</span> <span class="token variable">$s</span><span class="token punctuation">)</span>    <span class="token keyword">echo</span> <span class="token variable">$s</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;,&quot;</span><span class="token punctuation">;</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+        <span class="token operator">?</span><span class="token operator">&gt;</span>
+            &#x8A02;&#x55AE;&#x7DE8;&#x865F;<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;num&quot;</span><span class="token punctuation">]</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x96FB;&#x5F71;&#x540D;&#x7A31;<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;mn&quot;</span><span class="token punctuation">]</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x65E5;&#x671F;<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">=</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;Y-m-d&quot;</span><span class="token punctuation">,</span> <span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;date&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x6642;&#x9593;<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">=</span><span class="token variable">$time</span><span class="token punctuation">[</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;time&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x6578;&#x91CF;<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">=</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token variable">$seat</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+            &#x4F4D;&#x7F6E;<span class="token punctuation">:</span><span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$seat</span> <span class="token keyword">as</span> <span class="token variable">$s</span><span class="token punctuation">)</span>    <span class="token keyword">echo</span> <span class="token variable">$s</span><span class="token punctuation">.</span><span class="token double-quoted-string string">&quot;,&quot;</span><span class="token punctuation">;</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
             <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> &#x522A;&#x9664;&#x76F4;&#x63A5;&#x505A;&#x6309;&#x9215;&#x9023;&#x5230;api<span class="token punctuation">.</span>php&#x518D;&#x56DE;&#x4F86;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x82B1;&#x6642;&#x9593;&#x505A;ajax&#x6548;&#x679C; <span class="token operator">--</span><span class="token operator">&gt;</span>
             <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token double-quoted-string string">&quot;button&quot;</span> value<span class="token operator">=</span><span class="token double-quoted-string string">&quot;&#x522A;&#x9664;&quot;</span> onclick<span class="token operator">=</span><span class="token double-quoted-string string">&quot;window.location=&apos;api.php?do=delord&amp;id=&lt;?=<span class="token interpolation"><span class="token variable">$row</span></span>[&quot;</span>id<span class="token double-quoted-string string">&quot;]?&gt;&apos;&quot;</span><span class="token operator">&gt;</span>
             <span class="token operator">&lt;</span>hr<span class="token operator">&gt;</span>
-        <span class="token delimiter important">&lt;?php</span>
+        <span class="token operator">&lt;</span><span class="token operator">?</span>php
     <span class="token punctuation">}</span>
-<span class="token delimiter important">?&gt;</span>
+<span class="token operator">?</span><span class="token operator">&gt;</span>
 </code></pre>
 <h2 id="&#x8655;&#x7406;&#x8868;&#x55AE;">&#x8655;&#x7406;&#x8868;&#x55AE;</h2>
 <p>&#x5728; <code>api.php</code> &#x52A0;&#x5165;&#x8655;&#x7406;&#x8868;&#x55AE;&#x7684;&#x7A0B;&#x5F0F;&#x78BC;</p>
@@ -507,7 +494,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"編輯電影訂票管理 order.php","title":"電影訂票管理","level":"4.4","depth":1,"next":{"title":"結語","level":"5.1","depth":1,"path":"end/end.md","ref":"end/end.md","articles":[]},"previous":{"title":"院線片管理","level":"4.3","depth":1,"path":"back/movie.md","ref":"back/movie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-131804412-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"back/order.md","mtime":"2019-03-24T20:26:14.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-04T14:38:56.273Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"編輯電影訂票管理 order.php","title":"電影訂票管理","level":"4.4","depth":1,"next":{"title":"結語","level":"5.1","depth":1,"path":"end/end.md","ref":"end/end.md","articles":[]},"previous":{"title":"院線片管理","level":"4.3","depth":1,"path":"back/movie.md","ref":"back/movie.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"back/order.md","mtime":"2019-07-19T07:50:44.342Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-19T07:53:01.690Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

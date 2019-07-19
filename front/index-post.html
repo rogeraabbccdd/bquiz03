@@ -60,7 +60,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="index-post.html" />
+    <link rel="next" href="index-movie.html" />
     
     
     <link rel="prev" href="data.html" />
@@ -195,20 +195,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="index-post.html">
-            
-                <a href="index-post.html">
-            
-                    
-                    首頁 - 預告片海報
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="index-movie.html">
+        <li class="chapter " data-level="3.3" data-path="index-movie.html">
             
                 <a href="index-movie.html">
             
@@ -221,7 +208,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.5" data-path="movie.html">
+        <li class="chapter " data-level="3.4" data-path="movie.html">
             
                 <a href="movie.html">
             
@@ -234,7 +221,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.6" data-path="book.html">
+        <li class="chapter " data-level="3.5" data-path="book.html">
             
                 <a href="book.html">
             
@@ -247,7 +234,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.7" data-path="seat.html">
+        <li class="chapter " data-level="3.6" data-path="seat.html">
             
                 <a href="seat.html">
             
@@ -260,7 +247,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.8" data-path="out.html">
+        <li class="chapter " data-level="3.7" data-path="out.html">
             
                 <a href="out.html">
             
@@ -417,7 +404,7 @@
 &#x4F7F;&#x7528;Windows&#x5167;&#x5EFA;&#x7684;&#x76F8;&#x7247;&#x6AA2;&#x8996;&#x5668;&#xFF0C;&#x5C07;&#x5716;&#x7247;&#x65CB;&#x8F49;&#x6210;&#x5DE6;&#x53F3;&#x7BAD;&#x982D;<br>&#x5B8C;&#x6210;&#x5F8C;&#xFF0C;&#x91CD;&#x547D;&#x540D;&#x70BA; <code>l.jpg</code> &#x548C; <code>r.jpg</code> &#xFF0C;&#x653E;&#x5230; <code>img</code> &#x8CC7;&#x6599;&#x593E;&#x4E2D;</p>
 <pre class="language-"><code class="lang-php"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> &#x6309;&#x9215;&#x5340;div <span class="token operator">--</span><span class="token operator">&gt;</span>
 <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token double-quoted-string string">&quot;width:400px; height:100px;&quot;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token double-quoted-string string">&quot;dbor text-center&quot;</span><span class="token operator">&gt;</span>
-    <span class="token delimiter important">&lt;?php</span> 
+    <span class="token operator">&lt;</span><span class="token operator">?</span>php 
         <span class="token comment">// &#x7372;&#x53D6;&#x8A2D;&#x5B9A;&#x7684;&#x52D5;&#x756B;&#x6A23;&#x5F0F;</span>
         <span class="token variable">$ani</span> <span class="token operator">=</span> <span class="token function">All</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;select * from ani&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
         <span class="token comment">// &#x53D6;&#x5F97;&#x6240;&#x6709;&#x986F;&#x793A;&#x7684;&#x6D77;&#x5831;&#xFF0C;&#x7167;&#x5F8C;&#x53F0;&#x8A2D;&#x5B9A;&#x7684;&#x6392;&#x5217;&#x9806;&#x5E8F;&#x6392;</span>
@@ -432,22 +419,22 @@
         <span class="token variable">$i</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
         <span class="token keyword">foreach</span><span class="token punctuation">(</span><span class="token variable">$result</span> <span class="token keyword">as</span> <span class="token variable">$row</span><span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
-            <span class="token delimiter important">?&gt;</span>
+            <span class="token operator">?</span><span class="token operator">&gt;</span>
             <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> &#x8A2D;&#x5B9A;&#x5716;&#x7247;<span class="token keyword">class</span>&#x70BA;im&#xFF0C;display&#x70BA;inline&#xFF0C;onclick&#x57F7;&#x884C;&#x52D5;&#x756B;js <span class="token operator">--</span><span class="token operator">&gt;</span>
             <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token single-quoted-string string">&apos;img/&lt;?=$row[&quot;file&quot;]?&gt;&apos;</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token single-quoted-string string">&apos;im&apos;</span> id<span class="token operator">=</span><span class="token single-quoted-string string">&apos;ssaa&lt;?=$i?&gt;&apos;</span> width<span class="token operator">=</span><span class="token single-quoted-string string">&apos;80&apos;</span> height<span class="token operator">=</span><span class="token single-quoted-string string">&apos;103&apos;</span> style<span class="token operator">=</span><span class="token double-quoted-string string">&quot;display:inline&quot;</span> onclick<span class="token operator">=</span><span class="token double-quoted-string string">&quot;ani(&lt;?=<span class="token interpolation"><span class="token variable">$i</span></span>?&gt;)&quot;</span><span class="token operator">&gt;</span>
             <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> &#x6D77;&#x5831;&#x540D;&#x7247;&#xFF0C;&#x8A2D;&#x70BA;&#x4E0D;&#x986F;&#x793A;&#xFF0C;&#x5C55;&#x793A;&#x6642;&#x8981;&#x5F9E;&#x9019;&#x88E1;&#x6293;&#x8CC7;&#x6599; <span class="token operator">--</span><span class="token operator">&gt;</span>
-            <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token double-quoted-string string">&quot;display:none&quot;</span> id<span class="token operator">=</span><span class="token single-quoted-string string">&apos;text&lt;?=$i?&gt;&apos;</span><span class="token operator">&gt;</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;text&quot;</span><span class="token punctuation">]</span><span class="token delimiter important">?&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
-            <span class="token delimiter important">&lt;?php</span>
+            <span class="token operator">&lt;</span>span style<span class="token operator">=</span><span class="token double-quoted-string string">&quot;display:none&quot;</span> id<span class="token operator">=</span><span class="token single-quoted-string string">&apos;text&lt;?=$i?&gt;&apos;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">=</span><span class="token variable">$row</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;text&quot;</span><span class="token punctuation">]</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">?</span>php
             <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
 
         <span class="token comment">// &#x53F3;&#x7BAD;&#x982D;</span>
         <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token variable">$tpo</span> <span class="token operator">&gt;</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token keyword">echo</span> <span class="token double-quoted-string string">&quot;&lt;img src=&apos;img/r.jpg&apos; onclick=&apos;pp(2)&apos;&gt;&quot;</span><span class="token punctuation">;</span>
-        <span class="token delimiter important">?&gt;</span>
+        <span class="token operator">?</span><span class="token operator">&gt;</span>
         <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
         <span class="token comment">// &#x76F4;&#x63A5;&#x8907;&#x88FD;&#x7B2C;&#x4E00;&#x984C;&#x9996;&#x9801;&#x7684;js&#x4F86;&#x4FEE;&#x6539;</span>
         <span class="token comment">// &#x5728;num&#x5E36;&#x5165;&#x7E3D;&#x6578;</span>
-        <span class="token keyword">var</span> nowpage<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>num<span class="token operator">=</span><span class="token delimiter important">&lt;?=</span><span class="token variable">$po</span><span class="token delimiter important">?&gt;</span><span class="token punctuation">;</span>
+        <span class="token keyword">var</span> nowpage<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>num<span class="token operator">=</span><span class="token operator">&lt;</span><span class="token operator">?</span><span class="token operator">=</span><span class="token variable">$po</span><span class="token operator">?</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
         <span class="token keyword">function</span> <span class="token function">pp</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
         <span class="token punctuation">{</span>
             <span class="token keyword">var</span> s<span class="token punctuation">,</span>t<span class="token punctuation">;</span>
@@ -499,7 +486,7 @@
     2 &#x70BA; slideToggle&#xFF0C;&#x70BA;&#x984C;&#x76EE;&#x898F;&#x5B9A;&#x7684;&#x7E2E;&#x653E;
     3 &#x70BA; slideUp&#xFF0C;&#x70BA;&#x984C;&#x76EE;&#x898F;&#x5B9A;&#x7684;&#x6ED1;&#x51FA;
 */</span>
-<span class="token keyword">function</span> <span class="token function">ani</span><span class="token punctuation">(</span>post<span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">ani</span><span class="token punctuation">(</span><span class="token parameter">post</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token comment">// &#x5148;&#x51FA;&#x5834;&#x52D5;&#x756B;</span>
     <span class="token comment">// &#x5728;&#x51FD;&#x5F0F;&#x88E1;&#x9762;&#x52A0;&#x5165;&#x63DB;&#x5716;&#x63DB;&#x5B57;&#x7684;function&#xFF0C;&#x5728;&#x51FA;&#x5834;&#x5F8C;&#x624D;&#x57F7;&#x884C;&#x63DB;&#x5716;</span>
@@ -515,7 +502,7 @@
 <span class="token punctuation">}</span>
 
 <span class="token comment">// &#x5C07;&#x6D77;&#x5831;&#x5C55;&#x793A;&#x5340;&#x7684;&#x5716;&#x548C;&#x5B57;&#x63DB;&#x6210;&#x4E0B;&#x4E00;&#x500B;&#x6D77;&#x5831;&#x7684;</span>
-<span class="token keyword">function</span> <span class="token function">change</span><span class="token punctuation">(</span>post<span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token parameter">post</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token comment">// &#x5C07;&#x4E0B;&#x4E00;&#x500B;&#x6D77;&#x5831;&#x7684;&#x5716;&#x5E36;&#x5165;&#x5C55;&#x793A;&#x5340;</span>
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#showpost&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">&quot;src&quot;</span><span class="token punctuation">,</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">&quot;#ssaa&quot;</span><span class="token operator">+</span>post<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">&quot;src&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -557,7 +544,7 @@
                 </a>
                 
                 
-                <a href="index-post.html" class="navigation navigation-next " aria-label="Next page: 首頁 - 預告片海報">
+                <a href="index-movie.html" class="navigation navigation-next " aria-label="Next page: 首頁 - 院線片清單">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -568,7 +555,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"編輯首頁index.php","title":"首頁 - 預告片海報","level":"3.2","depth":1,"next":{"title":"首頁 - 預告片海報","level":"3.3","depth":1,"path":"front/index-post.md","ref":"front/index-post.md","articles":[]},"previous":{"title":"編輯共用資料","level":"3.1","depth":1,"path":"front/data.md","ref":"front/data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":"UA-131804412-2"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"front/index-post.md","mtime":"2019-03-24T05:10:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-04T14:38:56.273Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"description":"編輯首頁index.php","title":"首頁 - 預告片海報","level":"3.2","depth":1,"next":{"title":"首頁 - 院線片清單","level":"3.3","depth":1,"path":"front/index-movie.md","ref":"front/index-movie.md","articles":[]},"previous":{"title":"編輯共用資料","level":"3.1","depth":1,"path":"front/data.md","ref":"front/data.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"front/index-post.md","mtime":"2019-07-19T07:50:44.352Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-19T07:53:01.690Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
