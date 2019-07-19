@@ -11,7 +11,6 @@
 ## 前台
 * [編輯共用資料](front/data.md)
 * [首頁 - 預告片海報](front/index-post.md)
-* [首頁 - 預告片海報](front/index-post.md)
 * [首頁 - 院線片清單](front/index-movie.md)
 * [劇情簡介頁](front/movie.md)
 * [訂票 - 訂票頁](front/book.md)
