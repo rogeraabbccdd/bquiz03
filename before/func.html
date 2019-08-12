@@ -1,519 +1,62 @@
-
-<!DOCTYPE HTML>
-<html lang="" >
-    <head>
-        <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>編寫共用程式碼 · GitBook</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="寫好共用function以及資料庫連接、session等程式碼">
-        <meta name="generator" content="GitBook 3.2.3">
-        
-        
-        
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>編寫共用程式碼 | ABC影城</title>
+    <meta name="description" content="寫好共用function以及資料庫連接、session等程式碼">
+    <link rel="stylesheet" href="/bquiz03/css/custom.css">
+  <link rel="shortcut icon" href="/bquiz03/images/favicon.ico">
     
-    <link rel="stylesheet" href="../gitbook/style.css">
-
-    
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
-                
-            
-        
-
-    
-
-    
-        
-        <link rel="stylesheet" href="../styles/website.css">
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-        
-    
-    
-    
-    <meta name="HandheldFriendly" content="true"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
-
-    
-    <link rel="next" href="../front/data.html" />
-    
-    
-    <link rel="prev" href="sql.html" />
-    
-
-    <style>
-    @media only screen and (max-width: 640px) {
-        .book-header .hidden-mobile {
-            display: none;
-        }
-    }
-    </style>
-    <script>
-        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]};
-    </script>
-
-    </head>
-    <body>
-        
-<div class="book">
-    <div class="book-summary">
-        
-            
-<div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
-</div>
-
-            
-                <nav role="navigation">
-                
-
-
-<ul class="summary">
-    
-    
-
-    
-
-    
-        
-        
-    
-        <li class="chapter " data-level="1.1" data-path="../">
-            
-                <a href="../">
-            
-                    
-                    ABC影城
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">軟體安裝測試</li>
-        
-        
-    
-        <li class="chapter " data-level="2.1" data-path="file.html">
-            
-                <a href="file.html">
-            
-                    
-                    整理檔案
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="2.2" data-path="sql.html">
-            
-                <a href="sql.html">
-            
-                    
-                    建立資料庫
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="2.3" data-path="func.html">
-            
-                <a href="func.html">
-            
-                    
-                    編寫共用程式碼
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">前台</li>
-        
-        
-    
-        <li class="chapter " data-level="3.1" data-path="../front/data.html">
-            
-                <a href="../front/data.html">
-            
-                    
-                    編輯共用資料
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2" data-path="../front/index-post.html">
-            
-                <a href="../front/index-post.html">
-            
-                    
-                    首頁 - 預告片海報
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.3" data-path="../front/index-movie.html">
-            
-                <a href="../front/index-movie.html">
-            
-                    
-                    首頁 - 院線片清單
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.4" data-path="../front/movie.html">
-            
-                <a href="../front/movie.html">
-            
-                    
-                    劇情簡介頁
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.5" data-path="../front/book.html">
-            
-                <a href="../front/book.html">
-            
-                    
-                    訂票 - 訂票頁
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.6" data-path="../front/seat.html">
-            
-                <a href="../front/seat.html">
-            
-                    
-                    訂票 - 座位選擇
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.7" data-path="../front/out.html">
-            
-                <a href="../front/out.html">
-            
-                    
-                    訂票 - 訂單
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">後台</li>
-        
-        
-    
-        <li class="chapter " data-level="4.1" data-path="../back/admin.html">
-            
-                <a href="../back/admin.html">
-            
-                    
-                    後台管理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.2" data-path="../back/post.html">
-            
-                <a href="../back/post.html">
-            
-                    
-                    預告片海報管理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.3" data-path="../back/movie.html">
-            
-                <a href="../back/movie.html">
-            
-                    
-                    院線片管理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="4.4" data-path="../back/order.html">
-            
-                <a href="../back/order.html">
-            
-                    
-                    電影訂票管理
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-        
-        <li class="header">結語</li>
-        
-        
-    
-        <li class="chapter " data-level="5.1" data-path="../end/end.html">
-            
-                <a href="../end/end.html">
-            
-                    
-                    結語
-            
-                </a>
-            
-
-            
-        </li>
-    
-
-    
-
-    <li class="divider"></li>
-
-    <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
-        </a>
-    </li>
-</ul>
-
-
-                </nav>
-            
-        
-    </div>
-
-    <div class="book-body">
-        
-            <div class="body-inner">
-                
-                    
-
-<div class="book-header" role="navigation">
-    
-
-    <!-- Title -->
-    <h1>
-        <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >編寫共用程式碼</a>
-    </h1>
-</div>
-
-
-
-
-                    <div class="page-wrapper" tabindex="-1" role="main">
-                        <div class="page-inner">
-                            
-<div id="book-search-results">
-    <div class="search-noresults">
-    
-                                <section class="normal markdown-section">
-                                
-                                <h1 id="&#x7DE8;&#x5BEB;&#x5171;&#x7528;&#x7A0B;&#x5F0F;&#x78BC;">&#x7DE8;&#x5BEB;&#x5171;&#x7528;&#x7A0B;&#x5F0F;&#x78BC;</h1>
-<h2 id="&#x5EFA;&#x7ACB;&#x6A94;&#x6848;sqlphp">&#x5EFA;&#x7ACB;&#x6A94;&#x6848;sql.php</h2>
-<p>&#x5EFA;&#x7ACB;&#x6A94;&#x6848;sql.php&#xFF0C;&#x653E;&#x5165;&#x5171;&#x7528;&#x7A0B;&#x5F0F;&#x78BC;</p>
-<h2 id="&#x5BEB;&#x5165;&#x5FC5;&#x8981;&#x7A0B;&#x5F0F;&#x78BC;">&#x5BEB;&#x5165;&#x5FC5;&#x8981;&#x7A0B;&#x5F0F;&#x78BC;</h2>
-<pre class="language-"><code class="lang-php"><span class="token comment">// &#x958B;&#x555F;&#x8CC7;&#x6599;&#x5EAB;&#x9023;&#x63A5;</span>
+    <link rel="preload" href="/bquiz03/assets/css/0.styles.1c30ea06.css" as="style"><link rel="preload" href="/bquiz03/assets/js/app.fbffd5bc.js" as="script"><link rel="preload" href="/bquiz03/assets/js/5.1ac8d888.js" as="script"><link rel="preload" href="/bquiz03/assets/js/18.1fdcbcae.js" as="script"><link rel="prefetch" href="/bquiz03/assets/js/1.1740a04a.js"><link rel="prefetch" href="/bquiz03/assets/js/10.72f8ca37.js"><link rel="prefetch" href="/bquiz03/assets/js/11.153ce2b6.js"><link rel="prefetch" href="/bquiz03/assets/js/12.52b7e175.js"><link rel="prefetch" href="/bquiz03/assets/js/13.d88dbded.js"><link rel="prefetch" href="/bquiz03/assets/js/14.d0d6c71a.js"><link rel="prefetch" href="/bquiz03/assets/js/15.401ed2b3.js"><link rel="prefetch" href="/bquiz03/assets/js/16.ba4cfaee.js"><link rel="prefetch" href="/bquiz03/assets/js/17.61b57341.js"><link rel="prefetch" href="/bquiz03/assets/js/19.77c89d4a.js"><link rel="prefetch" href="/bquiz03/assets/js/2.faccbec1.js"><link rel="prefetch" href="/bquiz03/assets/js/20.54073a99.js"><link rel="prefetch" href="/bquiz03/assets/js/21.9d7c8139.js"><link rel="prefetch" href="/bquiz03/assets/js/22.9cf94624.js"><link rel="prefetch" href="/bquiz03/assets/js/23.38480e45.js"><link rel="prefetch" href="/bquiz03/assets/js/24.aef21372.js"><link rel="prefetch" href="/bquiz03/assets/js/25.d127fccf.js"><link rel="prefetch" href="/bquiz03/assets/js/26.b161bb4b.js"><link rel="prefetch" href="/bquiz03/assets/js/6.51455cf0.js"><link rel="prefetch" href="/bquiz03/assets/js/7.1538ba3a.js"><link rel="prefetch" href="/bquiz03/assets/js/8.f3aee4d3.js"><link rel="prefetch" href="/bquiz03/assets/js/9.8ff0d1ce.js"><link rel="prefetch" href="/bquiz03/assets/js/vendors~docsearch.da3e8cbb.js">
+    <link rel="stylesheet" href="/bquiz03/assets/css/0.styles.1c30ea06.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/bquiz03/" class="home-link router-link-active"><!----> <span class="site-name">
+			ABC影城
+		</span></a> <div class="links" style="max-width:nullpx;"><div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="https://bquiz.kento520.tw" target="_blank" rel="noopener noreferrer" class="nav-link external">
+	首頁
+	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/rogeraabbccdd/bquiz03" target="_blank" rel="noopener noreferrer" class="nav-link external">
+	GitHub
+	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="https://bquiz.kento520.tw" target="_blank" rel="noopener noreferrer" class="nav-link external">
+	首頁
+	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://github.com/rogeraabbccdd/bquiz03" target="_blank" rel="noopener noreferrer" class="nav-link external">
+	GitHub
+	<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/bquiz03/" class="sidebar-link">首頁</a></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>前置作業</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/bquiz03/before/file.html" class="sidebar-link">整理檔案</a></li><li><a href="/bquiz03/before/sql.html" class="sidebar-link">建立資料庫</a></li><li><a href="/bquiz03/before/func.html" class="active sidebar-link">編寫共用程式碼</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/bquiz03/before/func.html#建立檔案sql-php" class="sidebar-link">建立檔案sql.php</a></li><li class="sidebar-sub-header"><a href="/bquiz03/before/func.html#寫入必要程式碼" class="sidebar-link">寫入必要程式碼</a></li><li class="sidebar-sub-header"><a href="/bquiz03/before/func.html#寫入function" class="sidebar-link">寫入function</a></li><li class="sidebar-sub-header"><a href="/bquiz03/before/func.html#寫入變數" class="sidebar-link">寫入變數</a></li></ul></li><li><a href="/bquiz03/before/data.html" class="sidebar-link">編輯共用資料</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>前台</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/bquiz03/front/index-post.html" class="sidebar-link">首頁 - 預告片海報</a></li><li><a href="/bquiz03/front/index-movie.html" class="sidebar-link">首頁 - 院線片清單</a></li><li><a href="/bquiz03/front/movie.html" class="sidebar-link">劇情簡介頁</a></li><li><a href="/bquiz03/front/book.html" class="sidebar-link">線上訂票頁</a></li><li><a href="/bquiz03/front/seat.html" class="sidebar-link">訂票座位選擇頁</a></li><li><a href="/bquiz03/front/out.html" class="sidebar-link">電影票訂單頁</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>後台</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/bquiz03/back/admin.html" class="sidebar-link">管理系統</a></li><li><a href="/bquiz03/back/post.html" class="sidebar-link">預告片海報管理</a></li><li><a href="/bquiz03/back/movie.html" class="sidebar-link">院線片管理</a></li><li><a href="/bquiz03/back/order.html" class="sidebar-link">電影訂票管理</a></li></ul></div></li><li><a href="/bquiz03/end/end.html" class="sidebar-link">結語</a></li></ul> </div> <div class="page"> <div custom="true" class="content__default"><h1 id="編寫共用程式碼"><a href="#編寫共用程式碼" aria-hidden="true" class="header-anchor">#</a> 編寫共用程式碼</h1> <h2 id="建立檔案sql-php"><a href="#建立檔案sql-php" aria-hidden="true" class="header-anchor">#</a> 建立檔案sql.php</h2> <p>建立檔案sql.php，放入共用程式碼</p> <h2 id="寫入必要程式碼"><a href="#寫入必要程式碼" aria-hidden="true" class="header-anchor">#</a> 寫入必要程式碼</h2> <div class="language-php line-numbers-mode"><pre class="language-php"><code><span class="token comment">// 開啟資料庫連接</span>
 <span class="token variable">$pdo</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDO</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;mysql:host=localhost;dbname=dbxx;charset=utf8&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;root&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// session</span>
 <span class="token function">session_start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="&#x5BEB;&#x5165;function">&#x5BEB;&#x5165;function</h2>
-<p>&#x7531;&#x65BC;&#x8003;&#x8A66;&#x6709;&#x56DB;&#x500B;&#x5C0F;&#x6642;&#x7684;&#x6642;&#x9593;&#x9650;&#x5236;&#xFF0C;&#x5C07;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x8A9E;&#x6CD5;&#x5BEB;&#x6210; function &#x4F86;&#x7E2E;&#x77ED;&#x5B57;&#x6578;&#xFF0C;&#x7BC0;&#x7701;&#x6253;&#x5B57;&#x6642;&#x9593;  </p>
-<pre class="language-"><code class="lang-php"><span class="token comment">// &#x7BC0;&#x7701; fetchAll &#x5B57;&#x6578;</span>
-<span class="token comment">// &#x53EA;&#x5BEB;fetchAll&#x5C31;&#x5920;&#x4E86;&#xFF0C;&#x56E0;&#x70BA;fetchAll&#x6709;&#x542B;query&#xFF0C;&#x6240;&#x4EE5;&#x66F4;&#x65B0;&#x548C;&#x522A;&#x9664;&#x8CC7;&#x6599;&#x4E5F;&#x80FD;&#x7528;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="寫入function"><a href="#寫入function" aria-hidden="true" class="header-anchor">#</a> 寫入function</h2> <p>由於考試有四個小時的時間限制，將一些常用語法寫成 function 來縮短字數，節省打字時間</p> <div class="language-php line-numbers-mode"><pre class="language-php"><code><span class="token comment">// 節省 fetchAll 字數</span>
+<span class="token comment">// 只寫fetchAll就夠了，因為fetchAll有含query，所以更新和刪除資料也能用</span>
 <span class="token keyword">function</span> <span class="token function">All</span><span class="token punctuation">(</span><span class="token variable">$sql</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">global</span> <span class="token variable">$pdo</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token variable">$pdo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token variable">$sql</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">fetchAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">global</span> <span class="token variable">$pdo</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token variable">$pdo</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token variable">$sql</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">&gt;</span><span class="token function">fetchAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token comment">// &#x7BC0;&#x7701; header&#x8DF3;&#x9801; &#x5B57;&#x6578;</span>
-<span class="token comment">// &#x5176;&#x4ED6;&#x984C;&#x7248;&#x578B;&#x81EA;&#x8A02;&#x7684;Javascript&#x8DF3;&#x9801;&#x51FD;&#x5F0F;&#x540D;&#x7A31;&#x4E5F;&#x53EB;lo</span>
+<span class="token comment">// 節省 header跳頁 字數</span>
+<span class="token comment">// 其他題版型自訂的Javascript跳頁函式名稱也叫lo</span>
 <span class="token keyword">function</span> <span class="token function">lo</span><span class="token punctuation">(</span><span class="token variable">$l</span><span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token function">header</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;location:&quot;</span><span class="token punctuation">.</span><span class="token variable">$l</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token function">header</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;location:&quot;</span><span class="token punctuation">.</span><span class="token variable">$l</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre>
-<h2 id="&#x5BEB;&#x5165;&#x8B8A;&#x6578;">&#x5BEB;&#x5165;&#x8B8A;&#x6578;</h2>
-<p>&#x7B2C;&#x4E09;&#x984C;&#x6709;&#x4E9B;&#x8B8A;&#x6578;&#x53EF;&#x4EE5;&#x9810;&#x5148;&#x5BEB;&#x597D;&#x5728;&#x5171;&#x7528;&#x6A94;&#x4E2D;&#xFF0C;&#x65B9;&#x4FBF;&#x4E4B;&#x5F8C;&#x5F15;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#x6642;&#x9593;&#x548C;&#x96FB;&#x5F71;&#x5206;&#x7D1A;  </p>
-<pre class="language-"><code class="lang-php"><span class="token comment">// &#x4ECA;&#x5929;&#x65E5;&#x671F;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="寫入變數"><a href="#寫入變數" aria-hidden="true" class="header-anchor">#</a> 寫入變數</h2> <p>第三題有些變數可以預先寫好在共用檔中，方便之後引用，例如時間和電影分級</p> <div class="language-php line-numbers-mode"><pre class="language-php"><code><span class="token comment">// 今天日期</span>
 <span class="token variable">$today</span> <span class="token operator">=</span> <span class="token function">strtotime</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;today&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x76EE;&#x524D;&#x6642;&#x9593;</span>
+<span class="token comment">// 目前時間</span>
 <span class="token variable">$now</span> <span class="token operator">=</span> <span class="token function">strtotime</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;now&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x5206;&#x7D1A;</span>
-<span class="token variable">$level</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;&#x666E;&#x904D;&#x7D1A;&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;&#x4FDD;&#x8B77;&#x7D1A;&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;&#x8F14;&#x5C0E;&#x7D1A;&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;&#x9650;&#x5236;&#x7D1A;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// &#x6642;&#x6BB5;</span>
+<span class="token comment">// 分級</span>
+<span class="token variable">$level</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token double-quoted-string string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;普遍級&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;保護級&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;輔導級&quot;</span><span class="token punctuation">,</span> <span class="token double-quoted-string string">&quot;限制級&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 時段</span>
 <span class="token variable">$time</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token double-quoted-string string">&quot;14:00~16:00&quot;</span><span class="token punctuation">,</span><span class="token double-quoted-string string">&quot;16:00~18:00&quot;</span><span class="token punctuation">,</span><span class="token double-quoted-string string">&quot;18:00~20:00&quot;</span><span class="token punctuation">,</span><span class="token double-quoted-string string">&quot;20:00~22:00&quot;</span><span class="token punctuation">,</span><span class="token double-quoted-string string">&quot;22:00~24:00&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-</code></pre>
-
-                                
-                                </section>
-                            
-    </div>
-    <div class="search-results">
-        <div class="has-results">
-            
-            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
-            <ul class="search-results-list"></ul>
-            
-        </div>
-        <div class="no-results">
-            
-            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
-            
-        </div>
-    </div>
-</div>
-
-                        </div>
-                    </div>
-                
-            </div>
-
-            
-                
-                <a href="sql.html" class="navigation navigation-prev " aria-label="Previous page: 建立資料庫">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="../front/data.html" class="navigation navigation-next " aria-label="Next page: 編輯共用資料">
-                    <i class="fa fa-angle-right"></i>
-                </a>
-                
-            
-        
-    </div>
-
-    <script>
-        var gitbook = gitbook || [];
-        gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"description":"寫好共用function以及資料庫連接、session等程式碼","title":"編寫共用程式碼","level":"2.3","depth":1,"next":{"title":"編輯共用資料","level":"3.1","depth":1,"path":"front/data.md","ref":"front/data.md","articles":[]},"previous":{"title":"建立資料庫","level":"2.2","depth":1,"path":"before/sql.md","ref":"before/sql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["prism","-highlight","ga","github","github-buttons","livereload"],"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/rogeraabbccdd/bquiz03"},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"night","family":"sans","size":2},"github-buttons":{"buttons":[{"user":"rogeraabbccdd","repo":"bquiz03","type":"star","size":"small","count":true}]},"ga":{"configuration":"auto","token":""},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"before/func.md","mtime":"2019-07-19T07:50:44.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-19T07:53:01.690Z"},"basePath":"..","book":{"language":""}});
-        });
-    </script>
-</div>
-
-        
-    <script src="../gitbook/gitbook.js"></script>
-    <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
-        
-    
-
-    </body>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+				&lt;
+				<a href="/bquiz03/before/sql.html" class="prev">
+					建立資料庫
+				</a></span> <span class="next"><a href="/bquiz03/before/data.html">
+					編輯共用資料
+				</a>
+				&gt;
+			</span></p></div> </div> <!----></div><div class="global-ui"></div></div>
+    <script src="/bquiz03/assets/js/app.fbffd5bc.js" defer></script><script src="/bquiz03/assets/js/5.1ac8d888.js" defer></script><script src="/bquiz03/assets/js/18.1fdcbcae.js" defer></script>
+  </body>
 </html>
-
